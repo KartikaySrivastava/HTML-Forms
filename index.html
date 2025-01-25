@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h1>Sample Form</h1>
+
+    <!-- * The type attribute in an HTML <input> field specifies what kind of data the input should accept.
+
+    * The name attribute in an HTML <input> field specifies the name of the input element. It is used to identify the data sent when a form is     submitted. The name attribute acts as a key in the key-value pair sent to the server.
+
+    * The id attribute in an HTML <input> field (or any HTML element) is used to assign a unique identifier to the element. This id allows the element to be uniquely identified and referenced in: CSS (for styling), JavaScript (for scripting), and HTML (for associating labels or other elements).
+
+    * The for attribute in an HTML <label> element is used to associate the label with a specific form element, such as an <input> field, <textarea>, or <select>. The value of the for attribute must match the id of the form element it is linked to.
+
+    * If you want to make a field comulsary to input, type required in the tag. 
+    
+    * maxlength is used to specify the length of the input
+    
+    * Autofocus is used to place the cursor automatically when the page loads -->
+
+    
+    <form action="post">
+        <div>
+            
+            <Label for="email" > Email : </Label>
+            <input type="email" name="email" placeholder="Enter your Email" id="email" autofocus>
+            <br>
+            <br>
+
+            <label for="username">Username : </label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <br>
+            <br>
+
+            <label for="password">Password : </label>
+            <input type="password" name="password" placeholder="Enter your password" id="password">
+            <br>
+            <br>
+        </div>
+        <div>
+            <!-- The name of both input fields are same so it checks only one option-->
+            <label>Select Gender</label>
+            <input type="radio" id="male" name="gender" value="male">  
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label> 
+        </div>
+
+        <div>
+            <br>
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">Click here to subscribe</label>
+        </div>
+
+        <div>
+            <br>
+            <label for="comment">Any Comments  : </label><br>
+            <textarea name="comment" rows="4" cols="50" placeholder="Enter your comment here" id="comment"></textarea>
+        </div>
+
+        <div>
+            <label for="language">Select Language : </label>
+            <select name="language" id="language">
+                <option value="" disabled selected>Select a language</option>
+                <option id="language" value="Java">Java</option>
+                <option id="language" value="Python">Python</option>
+                <option id="language" value="C++">C++</option>
+            </select>
+        </div>
+        <div>
+            <br>
+            <Label for="date" > Select Date</Label>
+            <input type="date" name="date" id="date">
+            <br>
+            <br>
+
+            <Label for="datetime" > Select Date and Time</Label>
+            <input type="datetime-local" name="datetime" id="datetime">
+            <br>
+            <br>
+
+            <Label for="color" > Select Color</Label>
+            <input type="color" name="color" id="color">
+            <br>
+            <br>
+
+            <Label for="file" > Select File to upload : </Label>
+            <input type="file" name="file" id="file">
+            <br>
+            <br>
+
+            <Label for="hidden" > Hidden : </Label>
+            <input type="hidden" name="hidden" id="hidden">
+            <br>
+            <br>
+
+            <Label for="month" > Select Month and Year:</Label>
+            <input type="month" id="month" name="month">
+            <br>
+            <br>
+        </div>
+
+        <div>
+            <br>
+            <Label for="number" > Select number : </Label>
+            <input type="number" name="number" id="number">
+            <br>
+            <br>
+
+            <Label for="range" > Select Range : </Label>
+            <input type="range" name="range" id="range">
+            <br>
+            <br>
+
+            <Label for="search" > Search Here : </Label>
+            <input type="search" name="search" id="search">
+            <br>
+            <br>
+
+            <Label for="telephone" > Select country code : </Label>
+            <select id="telephone" name="telephone">
+                <option value="" disabled selected>Select a country code</option>
+                <option value="+1">🇺🇸 +1 (USA)</option>
+                <option value="+91">🇮🇳 +91 (India)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+81">🇯🇵 +81 (Japan)</option>
+                <option value="+49">🇩🇪 +49 (Germany)</option>
+                <option value="+33">🇫🇷 +33 (France)</option>
+                <option value="+55">🇧🇷 +55 (Brazil)</option>
+                <option value="+86">🇨🇳 +86 (China)</option>
+                <option value="+27">🇿🇦 +27 (South Africa)</option>
+              </select>
+              <br>
+              <br>
+            <label for="telephone">Enter Phone Number : </label>
+            <input type="tel" name="telephone" id="telephone" maxlength="10">
+            <br>
+            <br>
+
+            <label for="time">Select Time : </label>
+            <input type="time" name="time" id="time">
+            <br>
+            <br>
+
+            <label for="url">Enter URL : </label>
+            <input type="url" name="url" id="url">
+            <br>
+            <br>
+
+            <label for="week">Enter URL : </label>
+            <input type="week" name="week" id="week">
+            <br>
+            <br>
+            
+            <label for="reset">Click here to reset : </label>
+            <input type="reset" name="reset" id="reset">
+            <br>
+            <br>
+
+            <label for="submit">Click here to submit : </label>
+            <input type="submit" name="submit" id="submit">
+            <br>
+            <br>
+
+            <label for="image">Click on image to submit: </label>
+            <input type="image" name="image" id="image">
+            <br>
+            <br>
+
+            <label for="button"></label>
+            <button id="button">Click Me</button>
+
+        </div>
+    </form>
+</body>
+</html>
